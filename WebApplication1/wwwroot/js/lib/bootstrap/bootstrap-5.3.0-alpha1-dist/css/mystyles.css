@@ -1,0 +1,35 @@
+﻿/*Makes text light blue */
+.lightblue {
+    color: rgb(42, 130, 165);
+    font-style: bold;
+}
+/*This is the background image where that I use to override the original image. */
+.background {
+    background-image: url(../img/background.jpeg);
+    background-size: cover;
+}
+/*Makes text grey */
+.grey {
+    color: rgb(107, 107, 107);
+}
+/*Makes text italic */
+.italic {
+    font-style: italic;
+}
+/*Makes text peach */
+.peach {
+    color: peachpuff;
+    font-style: bold;
+}
+/*This changes the font to Segoe if it is unavaiable it will go through a list of fonts until it arrives at sanserif */
+.sanserif {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*This makes the font oblique making it look fancier */
+.oblique {
+    font-style: oblique;
+}
+/*Makes font size slightly larger*/
+.font-size-large {
+    font-size: 40px;
+}

@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Grades";
+    ViewData["Header"] = "Home";
+}
+
+@model GradesValidationModel;
+
+<nav>
+    <a asp-controller="blah" asp-action="Index">Home </a>
+    <a asp-controller="blah" asp-action="Grade">Calc Grade</a>
+</nav>
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner bg-faded text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-lower italic">GPA Calculator</span>
+
+                    </h2><!--This is my gpa calculator-->
+                    <p>Please input your grade percentage as a whole number. Ie 98% is a 98. </p>
+                    <!--I overrode the font size to make it large.-->
+                    <form method="post">
+                        <label>Assignment Grade:</label>
+                        <input type="number" asp-for="assignment" id="assignment" /><br />
+                        <label>Group Project Grade:</label>
+                        <input type="number" asp-for="group" id="group" /><br />
+                        <label>Quizzes Grade:</label>
+                        <input type="number" asp-for="quizzes" id="quizzes" /><br />
+                        <label>Midterm Grade:</label>
+                        <input type="number" asp-for="midterm" id="midterm" /> <br />
+                        <label>Final Grade:</label>
+                        <input type="number" asp-for="final" id="final" /><br />
+                        <label>Intex Grade:</label>
+                        <input type="number" asp-for="intex" id="intex" /><br />
+                        <div class="intro-button mx-auto">
+                            <input class="btn btn-primary btn-xl" type="submit" id="btnSend">Calculate your overall GPA!</input>
+                        </div>
+                        <div asp-validation-summary = "All">
+                            
+                        </div>
+                    </form>
+                    <p id="output"></p>
+                    <a class="grey" href="#top"> To Top</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
